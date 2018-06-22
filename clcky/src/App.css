@@ -2,27 +2,31 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} */
 
 .App-header {
+  background-image: url("alcohol-alcoholic-ale-681847.jpg");
+  background-size: cover;
   background-color: #222;
-  height: 150px;
+  background-position: center;
+  height: 250px;
   padding: 20px;
   color: white;
+  font-family: 'Shrikhand', cursive;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3em;
+  margin-top: 79px;
+  
 }
 
 .App-intro {
   font-size: large;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
