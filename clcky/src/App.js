@@ -13,9 +13,12 @@ class App extends Component {
     topScore: "0"
   };
 
-  randomize = image => {
-    const images = this.state.images[Math.floor(image * Math.random())];
-  }
+  // randomImages= () => images[Math.floor(Math.random() * images.length)];
+ 
+
+  // randomize = image => {
+  //   const images = this.state.images[Math.floor(image * Math.random())];
+  // }
 
   render() {
     return (
