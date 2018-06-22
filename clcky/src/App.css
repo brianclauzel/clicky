@@ -10,11 +10,11 @@
 .App-header {
   background-image: url("alcohol-alcoholic-ale-681847.jpg");
   background-size: cover;
-  background-color: #222;
+  background-color: rgb(139, 134, 134);
   background-position: center;
   height: 250px;
   padding: 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: 'Shrikhand', cursive;
 }
 
