@@ -27,9 +27,11 @@ class App extends Component {
 
   win = () => {
     var {score} = this.state
-    alert("You beat the game! good job, fool.");
-    this.setState({score: "You Win!"});
-    this.reset();
+    if (score >= 12) {
+      alert("You beat the game! good job, fool.");
+      this.setState({score: "You Win!"});
+      this.reset();
+    }
   }
 
   topScore = () => {
@@ -54,7 +56,7 @@ class App extends Component {
   }
 
   correct = (id) => {
-    var {images, score, topScore} = this.state;
+    var {images, score} = this.state;
     if (score > 12) {
       this.win(); 
     }
@@ -65,20 +67,20 @@ class App extends Component {
     }
   }
 
-  incorrect = (id) => {
-    console.log("you lost, please play again");
+  incorrect = () => {
       alert("You clicked the same one twice!");
       this.reset();
   }
 
 
   counter = (id) => {
-    var {images, score, topScore} = this.state;
+    var {images} = this.state;
     if (images[id].clickedOn) {
       this.incorrect(id);
     }
     else {
       this.correct(id);
+      this.win();
     }
     this.shuffle();
   }
@@ -110,6 +112,11 @@ class App extends Component {
           />
         ))}
         </Wrapper>
+        <footer className="footer">
+          <div className="container">
+            <p className="footer-tag"><a href="https://www.github.com/brianclauzel/clicky/">© 2018 Brian Clauzel</a></p>
+          </div>
+        </footer>
       </div>
     );
   }
