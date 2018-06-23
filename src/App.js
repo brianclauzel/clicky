@@ -4,6 +4,7 @@ import Wrapper from "./components/Wrapper";
 import defaultImages from "./images.json";
 import './App.css';
 import PointCounter from './components/PointCounter';
+// https://aqueous-fjord-27825.herokuapp.com/
 
 class App extends Component {
 
