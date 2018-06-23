@@ -27,12 +27,9 @@ class App extends Component {
   }
 
   win = () => {
-    var {score} = this.state
-    if (score >= 12) {
       alert("You beat the game! good job, fool.");
       this.setState({score: "You Win!"});
-      this.reset();
-    }
+      this.reset(); 
   }
 
   topScore = () => {
@@ -57,9 +54,10 @@ class App extends Component {
   }
 
   correct = (id) => {
-    var {images, score} = this.state;
-    if (score > 12) {
+    var {images, score, topScore} = this.state;
+    if (score === 11) {
       this.win(); 
+      this.setState({topScore: 12});
     }
     else {
       images[id].clickedOn = true
@@ -81,7 +79,6 @@ class App extends Component {
     }
     else {
       this.correct(id);
-      this.win();
     }
     this.shuffle();
   }
@@ -103,10 +100,10 @@ class App extends Component {
           Click as many images as you can to gain points, but you can only click each one once.
         </p>
         <Wrapper>
-        {this.state.images.map((image, i) =>   (
+        {this.state.images.map((image, index) =>   (
           <ImageCard
             counter={this.counter}
-            id={i}
+            id={index}
             key={image.id}
             name={image.name}
             image={image.image}
